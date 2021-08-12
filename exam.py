@@ -1,27 +1,25 @@
 # 1
 # 1.1 - str
-# 1.2 - str
-# 1.3 - int
+# 1.2 - bool
+# 1.3 - dict
 # 1.4 - set
-# 1.5 - int
-# 1.6 - list
+# 1.5 - None
+# 1.6 - None
 # 1.7 - первые 4 значений -str, остальные - int
 # 1.8 - str
 # 1.9 - list
 # 1.10 - str
 
 # 2
-# sum_of_deposit = int(input('Enter deposit amount: '))
-# month = input('Enter month: ')
-# yearP = int(input('Enter annual percentage: '))
+def bank(deposit, last_sum, percent):
+    month = 0
+    first_sum = deposit
+    while  first_sum < last_sum:
+        first_sum = percent/100/12*first_sum+first_sum
+        month += 1
+    return month
 
-# def sm(sum_of_deposit, month, yearP):
-#     annual = yearP / 100
-#     total = annual/ month * sum_of_deposit + sum_of_deposit
-#     next = annual/ month * total + total
-#     months = total + next
-#     return months
-# print(sm(yearP, sum_of_deposit, yearP))
+print(bank(1000, 3500, 30))
 
 # 3.1
 # ls = ['Element', 'start', 'finish']
